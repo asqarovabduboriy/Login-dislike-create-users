@@ -1,5 +1,5 @@
 let wishes = JSON.parse(localStorage.getItem('wishes'));
-
+console.log(wishes);
 const wrapper = document.querySelector('.wrapper');
 
 
@@ -37,6 +37,7 @@ function createCard(data) {
 }
 
 createCard(wishes);
+
 const removWishe = (id) => {
     let filterData = wishes.filter(el => el.id !== +id);
     localStorage.setItem('wishes', JSON.stringify(filterData));
@@ -62,3 +63,9 @@ let islogin = localStorage.getItem('token');
     }
     chechlogin()
 
+const logout = document.querySelector('.logout');
+
+logout.addEventListener('click',()=>{
+    localStorage.removeItem('token');
+    window.location.replace('/page/login.html', '_self')
+})
