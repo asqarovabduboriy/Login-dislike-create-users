@@ -29,6 +29,7 @@ form.addEventListener('submit', async (e) => {
             console.log(res.token),
                 localStorage.setItem('token', res.token)
                 succses.style.display = 'flex';
+                window.location.replace('/page/wishes.html')
         })
 
         .catch(err => {
