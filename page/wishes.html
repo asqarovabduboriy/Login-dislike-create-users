@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar  container">
+            <h2 class="navbar__logo">API</h2>
+            <ul class="navbar__collection">
+                <li class="navbar__item">
+                    <a href="../index.html" class="navbar__link">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" class="navbar__link">Wishes</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../page/login.html" class="navbar__link">Login</a>
+                </li>
+                <li class="navbar__item log_out_btn">
+                        <button class="logout">Logout</button>
+                </li>
+            </ul>
+            <div class="navbar__menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        
+        </nav>
+    </header>
+
+    <div class="container wrapper">
+
+    </div>
+
+    <script src="../js/wishes.js">
+        const navbarCollection = document.querySelector(".navbar__collection")
+        const navbarMenu = document.querySelector(".navbar__menu")
+
+        navbarMenu.addEventListener("click", () => {
+            navbarCollection.classList.toggle('show')
+        })
+    </script>
+</body>
+
+</html>
